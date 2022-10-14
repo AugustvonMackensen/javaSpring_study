@@ -231,5 +231,130 @@ function jsonTest4(){
 }
 
 </script>
+
+<hr>
+<h2>5. JSON 객체 안에 계층형 다단계 하위 JSON 객체를 배열로 다루기</h2>
+<p id="p5" style="width:600px; height:750px; border:1px solid red;"></p>
+<button type="button" onclick="jsonTest5();">출력하기</button>
+
+<script type="text/javascript">
+
+var emphier2 = {
+		"D1" :{
+			"J1" :{
+				"empid": "22031521",
+				"username": "이순신",
+				"salary": 480,
+				"hobby": ["등산","독서","운동"]
+			},
+			"J2" :{
+				"empid": "22031522",
+				"username": "황지니",
+				"salary": 400,
+				"hobby": ["요리","영화","여행"]
+			}		
+		}		
+};
+
+
+function jsonTest5(){
+	console.log('emphier : ' + emphier2); //[Iobject Object] 확인
+	console.log('emphier.D1.J1 : ' + emphier2.D1['J1']);
+	console.log('emphier.D2.J2 : ' + emphier2.D1['J2']);
+	
+	//JSON 객체를 문자열로 변환해서 출력하기 : stringify() 함수 사용\
+	document.getElementById("p5").innerHTML = "<b>JSON 객체를 문자열로 변환해서 출력하기</b><br>";
+	document.getElementById("p5").innerHTML += JSON.stringify(emphier2);
+	document.getElementById("p5").innerHTML += JSON.stringify(emphier2.D1['J1']);
+	document.getElementById("p5").innerHTML += JSON.stringify(emphier2.D1['J1']);
+	document.getElementById("p5").innerHTML += JSON.stringify(emphier2.D1['J2']);
+	
+	//JSON 객체가 가진 값들을 하나씩 꺼내서 출력 추가하기
+	document.getElementById("p5").innerHTML += "<br><br><b>JSON 객체가 가진 값들을 하나씩 꺼내서 출력하기</b><br>";
+	document.getElementById("p5").innerHTML += "<b>[D1 부서 J1 직급 직원 정보]</b><br>";
+	document.getElementById("p5").innerHTML += "사 번 : " + emphier2.D1['J1'].empid + "<br>";
+	document.getElementById("p5").innerHTML += "직원명: " + emphier2.D1['J1'].username + "<br>";
+	document.getElementById("p5").innerHTML += "급 여 : " + emphier2.D1['J1'].salary + "<br>";
+	document.getElementById("p5").innerHTML += "취미활동 : " + emphier2.D1['J1'].hobby + "<br>";
+	
+	document.getElementById("p5").innerHTML += "<b>[D1 부서 J2 직급 직원 정보]</b><br>";
+	document.getElementById("p5").innerHTML += "사 번 : " + emphier2.D1['J2'].empid + "<br>";
+	document.getElementById("p5").innerHTML += "직원명: " + emphier2.D1['J2'].username + "<br>";
+	document.getElementById("p5").innerHTML += "급 여 : " + emphier2.D1['J2'].salary + "<br>";
+	document.getElementById("p5").innerHTML += "취미활동 : " + emphier2.D1['J2'].hobby + "<br>";
+	
+	//항목의 배열값들을 별도로 하나씩 다루기
+	document.getElementById("p5").innerHTML += "<br><br><b>JSON 객체가 가진 배열값들을 하나씩 꺼내서 출력</b><br>";
+	//for(var i=0; i < employee.hobby.length; i++){}
+	for(var i in emphier2.D1.J1.hobby){
+		document.getElementById("p5").innerHTML += "["+ i +"]:" + emphier2.D1.J1.hobby[i] + "<br>";
+	}
+	
+	for(var i in emphier2.D1.J2.hobby){
+		document.getElementById("p5").innerHTML += "["+ i +"]:" + emphier2.D1.J2.hobby[i] + "<br>";
+	}
+}
+
+</script>
+
+<hr>
+<h2>6. JSON 객체 안에 계층형 다단계 하위 JSON 객체를 배열로 다루기</h2>
+<p id="p6" style="width:600px; height:750px; border:1px solid red;"></p>
+<button type="button" onclick="jsonTest6();">출력하기</button>
+
+<script type="text/javascript">
+
+var empArray = {
+		"D1" :[
+			{
+				"empid": "22031521",
+				"username": "이순신",
+				"salary": 480,
+				"hobby": ["등산","독서","운동"]
+			},
+			{
+				"empid": "22031522",
+				"username": "황지니",
+				"salary": 400,
+				"hobby": ["요리","영화","여행"]
+			}		
+		]		
+};
+
+
+function jsonTest6(){
+	console.log('empArray : ' + empArray); //[Iobject Object] 확인
+	console.log('empArray.D1 : ' + empArray.D1);
+	console.log('empArray.D1[0] : ' + empArray.D1[0]);
+	console.log('empArray.D1[1] : ' + empArray.D1[1]);
+	
+	//JSON 객체를 문자열로 변환해서 출력하기 : stringify() 함수 사용\
+	document.getElementById("p6").innerHTML = "<b>JSON 객체를 문자열로 변환해서 출력하기</b><br>";
+	document.getElementById("p6").innerHTML += JSON.stringify(empArray);
+	document.getElementById("p6").innerHTML += JSON.stringify(empArray.D1);
+	for(var i in empArray.D1){
+		document.getElementById("p6").innerHTML += JSON.stringify(empArray.D1[i]);
+	}
+	
+	//JSON 객체가 가진 값들을 하나씩 꺼내서 출력 추가하기
+	document.getElementById("p6").innerHTML += "<br><br><b>JSON 객체가 가진 값들을 하나씩 꺼내서 출력하기</b><br>";
+	document.getElementById("p6").innerHTML += "<b>[D1 부서 직급 직원 정보]</b><br>";
+	for(var i in empArray.D1){
+		document.getElementById("p6").innerHTML += "사 번 : " + empArray.D1[i].empid + "<br>";
+		document.getElementById("p6").innerHTML += "직원명: " + empArray.D1[i].username + "<br>";
+		document.getElementById("p6").innerHTML += "급 여 : " + empArray.D1[i].salary + "<br>";
+		document.getElementById("p6").innerHTML += "취미활동 : " + empArray.D1[i].hobby + "<br>";
+		
+		document.getElementById("p5").innerHTML += "<br><br><b>JSON 객체가 가진 배열값들을 하나씩 꺼내서 출력</b><br>";
+		//항목의 배열값들을 별도로 하나씩 다루기
+		for(var j in empArray.D1[i].hobby){
+			document.getElementById("p6").innerHTML += "["+ j +"]:" + empArray.D1[i].hobby[j] + "<br>";
+		} //hobby for j
+	} //for i
+	
+	
+} //function
+
+</script>
 </body>
 </html>
