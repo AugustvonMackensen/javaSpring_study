@@ -170,11 +170,11 @@ function jsonTest3(){
 <hr>
 <h2>4. JSON 객체 안에 계층형 다단계 하위 JSON 객체 다루기</h2>
 <p id="p4" style="width:600px; height:750px; border:1px solid red;"></p>
-<button type="button" onclick="jsonTest3();">출력하기</button>
+<button type="button" onclick="jsonTest4();">출력하기</button>
 
 <script type="text/javascript">
 
-var emplist = {
+var emphier = {
 		"D1" :{
 			"J1" :{
 				"empid": "22031521",
@@ -193,39 +193,40 @@ var emplist = {
 
 
 function jsonTest4(){
-	console.log('employee : ' + emplist); //[Iobject Object] 확인
-	console.log('employee.D1 : ' + emplist.D1);
-	console.log('employee.D2 : ' + emplist.D2);
+	console.log('emphier : ' + emphier); //[Iobject Object] 확인
+	console.log('emphier.D1.J1 : ' + emphier.D1.J1);
+	console.log('emphier.D2.J2 : ' + emphier.D1.J2);
 	
 	//JSON 객체를 문자열로 변환해서 출력하기 : stringify() 함수 사용\
 	document.getElementById("p4").innerHTML = "<b>JSON 객체를 문자열로 변환해서 출력하기</b><br>";
-	document.getElementById("p4").innerHTML += JSON.stringify(emplist);
-	document.getElementById("p4").innerHTML += JSON.stringify(emplist.D1);
-	document.getElementById("p4").innerHTML += JSON.stringify(emplist.D2);
+	document.getElementById("p4").innerHTML += JSON.stringify(emphier);
+	document.getElementById("p4").innerHTML += JSON.stringify(emphier.D1);
+	document.getElementById("p4").innerHTML += JSON.stringify(emphier.D1.J1);
+	document.getElementById("p4").innerHTML += JSON.stringify(emphier.D1.J2);
 	
 	//JSON 객체가 가진 값들을 하나씩 꺼내서 출력 추가하기
 	document.getElementById("p4").innerHTML += "<br><br><b>JSON 객체가 가진 값들을 하나씩 꺼내서 출력하기</b><br>";
-	document.getElementById("p4").innerHTML += "<b>[D1 부서 직원 정보]</b><br>";
-	document.getElementById("p4").innerHTML += "사 번 : " + emplist.D1.empid + "<br>";
-	document.getElementById("p4").innerHTML += "직원명: " + emplist.D1.username + "<br>";
-	document.getElementById("p4").innerHTML += "급 여 : " + emplist.D1.salary + "<br>";
-	document.getElementById("p4").innerHTML += "취미활동 : " + emplist.D1.hobby + "<br>";
+	document.getElementById("p4").innerHTML += "<b>[D1 부서 J1 직급 직원 정보]</b><br>";
+	document.getElementById("p4").innerHTML += "사 번 : " + emphier.D1.J1.empid + "<br>";
+	document.getElementById("p4").innerHTML += "직원명: " + emphier.D1.J1.username + "<br>";
+	document.getElementById("p4").innerHTML += "급 여 : " + emphier.D1.J1.salary + "<br>";
+	document.getElementById("p4").innerHTML += "취미활동 : " + emphier.D1.J1.hobby + "<br>";
 	
-	document.getElementById("p4").innerHTML += "<b>[D2 부서 직원 정보]</b><br>";
-	document.getElementById("p4").innerHTML += "사 번 : " + emplist.D2.empid + "<br>";
-	document.getElementById("p4").innerHTML += "직원명: " + emplist.D2.username + "<br>";
-	document.getElementById("p4").innerHTML += "급 여 : " + emplist.D2.salary + "<br>";
-	document.getElementById("p4").innerHTML += "취미활동 : " + emplist.D2.hobby + "<br>";
+	document.getElementById("p4").innerHTML += "<b>[D2 부서 J2 직급 직원 정보]</b><br>";
+	document.getElementById("p4").innerHTML += "사 번 : " + emphier.D1.J2.empid + "<br>";
+	document.getElementById("p4").innerHTML += "직원명: " + emphier.D1.J2.username + "<br>";
+	document.getElementById("p4").innerHTML += "급 여 : " + emphier.D1.J2.salary + "<br>";
+	document.getElementById("p4").innerHTML += "취미활동 : " + emphier.D1.J2.hobby + "<br>";
 	
 	//항목의 배열값들을 별도로 하나씩 다루기
 	document.getElementById("p4").innerHTML += "<br><br><b>JSON 객체가 가진 배열값들을 하나씩 꺼내서 출력</b><br>";
 	//for(var i=0; i < employee.hobby.length; i++){}
-	for(var i in emplist.D1.hobby){
-		document.getElementById("p4").innerHTML += "["+ i +"]:" + emplist.D1.hobby[i] + "<br>";
+	for(var i in emphier.D1.J1.hobby){
+		document.getElementById("p4").innerHTML += "["+ i +"]:" + emphier.D1.J1.hobby[i] + "<br>";
 	}
 	
-	for(var i in emplist.D2.hobby){
-		document.getElementById("p4").innerHTML += "["+ i +"]:" + emplist.D2.hobby[i] + "<br>";
+	for(var i in emphier.D1.J2.hobby){
+		document.getElementById("p4").innerHTML += "["+ i +"]:" + emphier.D1.J2.hobby[i] + "<br>";
 	}
 }
 
