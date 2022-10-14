@@ -14,12 +14,15 @@
 function test(){
 	alert("페이지 로딩 완료됨.");
 }
-/* window.onload = function(){
-	
-}; */
+window.onload = function(){
+	//alert("페이지 로딩 완료됨.");
+};
 </script>
 </head>
-<body onload="test();">
-
+<!-- <body onload="test();">  -->
+<body>
+<h1>javascript로 ajax 다루기</h1>
+<hr>
+<h2>1. 브라우저의 XMLHttpRequest 지원여부 확인</h2>
 </body>
 </html>
