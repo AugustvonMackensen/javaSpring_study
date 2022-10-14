@@ -1,0 +1,65 @@
+[12:08:46][INFO ][ContextLoader.java:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:271)] - Root WebApplicationContext: initialization started
+[12:08:47][INFO ][ContextLoader.java:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)] - Root WebApplicationContext initialized in 828 ms
+[12:08:47][INFO ][FrameworkServlet.java:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:525)] - Initializing Servlet 'appServlet'
+[12:08:48][INFO ][FrameworkServlet.java:org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:547)] - Completed initialization in 1250 ms
+[12:08:53][INFO ][MemberController.java:com.test.first.member.controller.MemberController.loginMethod(MemberController.java:120)] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:08:54][INFO ][MemberController.java:com.test.first.member.controller.MemberController.loginMethod(MemberController.java:136)] - sessionID : EB554EF062A6CEB8784328A7E1433739
+[12:09:13][INFO ][MemberController.java:com.test.first.member.controller.MemberController.loginMethod(MemberController.java:120)] - login.do : Member [userid=user02, userpwd=pass02, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:09:13][INFO ][MemberController.java:com.test.first.member.controller.MemberController.loginMethod(MemberController.java:136)] - sessionID : E92DEB37E354A26BF6FFB932931417B0
+[12:13:13][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:13:13][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 849 ms
+[12:13:13][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:13:15][INFO ][FrameworkServlet.java:547] - Completed initialization in 1157 ms
+[12:13:18][INFO ][MemberController.java:120] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:13:19][INFO ][MemberController.java:136] - sessionID : B8C463CAE79C6F74C8C1A6E34FA796B6
+[12:19:21][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:19:22][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 806 ms
+[12:19:22][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:19:23][INFO ][FrameworkServlet.java:547] - Completed initialization in 1198 ms
+[12:19:28][INFO ][MemberController.java:120] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:19:29][INFO ][MemberController.java:136] - sessionID : 1C439A00C7D3287C6CE3A062974B85F8
+[12:19:51][INFO ][MemberController.java:120] - login.do : Member [userid=user02, userpwd=pass02, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:19:51][INFO ][MemberController.java:136] - sessionID : 7789D1FBEC11A0EB9DD1B9A58F17C705
+[12:20:02][INFO ][MemberController.java:120] - login.do : Member [userid=user02, userpwd=pass02, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:20:02][INFO ][MemberController.java:136] - sessionID : DAE56B4354B969DF07B4F43B835FC2A3
+[13:12:17][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:12:17][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 789 ms
+[13:12:17][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:12:19][INFO ][FrameworkServlet.java:547] - Completed initialization in 1135 ms
+[13:12:43][INFO ][MemberController.java:120] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[13:12:43][INFO ][MemberController.java:136] - sessionID : DA24F6AA9A898BF7041A009E50B6109B
+[13:13:32][INFO ][MemberController.java:296] - loginok.do : user01, Y
+[13:13:33][INFO ][MemberController.java:296] - loginok.do : user01, N
+[14:52:28][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:52:29][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 859 ms
+[14:52:29][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:52:31][INFO ][FrameworkServlet.java:547] - Completed initialization in 1252 ms
+[14:52:48][INFO ][MemberController.java:120] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[14:52:49][INFO ][MemberController.java:136] - sessionID : 815898F7A6145E5F6872B46C6E823847
+[14:55:16][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:55:17][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 985 ms
+[14:55:17][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:55:18][INFO ][FrameworkServlet.java:547] - Completed initialization in 1292 ms
+[14:57:32][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:57:33][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 905 ms
+[14:57:33][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:57:34][INFO ][FrameworkServlet.java:547] - Completed initialization in 1259 ms
+[15:00:02][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:00:03][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 950 ms
+[15:00:03][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:00:04][INFO ][FrameworkServlet.java:547] - Completed initialization in 1321 ms
+[15:02:55][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:02:56][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 841 ms
+[15:02:56][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:02:57][INFO ][FrameworkServlet.java:547] - Completed initialization in 1118 ms
+[16:19:26][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[16:19:26][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 833 ms
+[16:19:27][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[16:19:28][INFO ][FrameworkServlet.java:547] - Completed initialization in 1223 ms
+[16:19:32][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[16:19:33][INFO ][MemberController.java:138] - sessionID : A1ED3B91FA04683304490B2D6C8CEE90
+[16:27:38][INFO ][MemberController.java:179] - enroll.do : Member [userid=yang1234, userpwd=yang1234, username=양승준, gender=M, age=20, phone=01032411268, email=yang1112@naver.com, hobby=reading,sport,music,gaetcme, etc=잼민이, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[16:27:38][INFO ][MemberController.java:183] - after encode : Member [userid=yang1234, userpwd=$2a$10$DjIEio/5IhRmAaa596s/V.UcoKngJRVpK2k4TaVTPTlcCFMgHWPe., username=양승준, gender=M, age=20, phone=01032411268, email=yang1112@naver.com, hobby=reading,sport,music,gaetcme, etc=잼민이, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[16:27:38][INFO ][MemberController.java:184] - length : 60
+[16:27:43][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[16:27:43][INFO ][MemberController.java:138] - sessionID : A4F991640BE339B45D348B94B7CA516A
