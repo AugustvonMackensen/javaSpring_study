@@ -173,11 +173,44 @@
 	</script>
 	<hr>
 	
-	<h2>5. 서버로 전송값 없고, 결과로 문자열 받아 출력 : get 방식</h2>
-	<p id="p5" style="width:300px; height:50px; border:1px solid red;"></p>
+	<h2>5. 서버로 json 객체를 보내기</h2>
+	<div>
+		<fieldset>
+			<legend>새 공지글 등록하세요</legend>
+			제목 : <input type="text" id="title"><br>
+			작성자 : <input type="text" id="writer" value="admin"><br>
+			내용 : <textarea rows="5" cols="30" id="content"></textarea>
+		</fieldset>
+	</div>
 	<button id="test5">테스트</button>
 	
 	<script type="text/javascript">
+	$(function(){
+		$('#test5').on("click", function(){
+			//자바스크립트에서 json 객체 만들기
+			//var job = { name: '홍길동', age: 30};
+			
+			var job = new Object();
+			job.title = $('#title').val();
+			job.writer = document.getElementById('writer').value;
+			job.content = $('#content').val();
+			
+			$.ajax({
+				url: "test5.do",
+				type: "post",
+				data: JSON.stringify(job),
+				contentType: "application/json; charset=utf-8",
+				success: function(result){
+					alert("요청 성공!");
+				},
+				error: function(request, status, errorData){
+					console.log("error code : " + request.status + 
+							"\nMessage : " + request.responseText + 
+							"\nError : " + errorData);
+				}
+			}); //ajax
+		}); //on click
+	}); //document.ready
 	</script>
 	<hr>
 	
