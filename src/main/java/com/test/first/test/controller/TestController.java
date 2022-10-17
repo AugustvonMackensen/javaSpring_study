@@ -4,10 +4,12 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.test.first.notice.model.service.NoticeService;
@@ -130,6 +133,43 @@ public class TestController {
     	
     	//응답시에는 Json 객체를 String 형으로 바꿔서 응답합
     	return job.toJSONString(); //servlet-context.xml 의 jsonView가 받아서 내보냄
+    }
+    
+    //클라이언트 요청을 처리한 결과로 json 배열을 jsonView로
+    //리턴하는 메소드
+    @RequestMapping(value="test4.do", method=RequestMethod.POST)
+    @ResponseBody
+    public String test4Method(@RequestParam("keyword") String keyword, HttpServletResponse response) throws UnsupportedEncodingException {
+    	logger.info("test4.do run...");
+    	
+    	ArrayList<Notice> list = noticeService.selectSearchTitle(keyword);
+    	
+    	response.setContentType("application/json; charset=utf-8");
+    	
+    	//전송용 json 객체 준비
+    	JSONObject sendJson = new JSONObject();
+    	//json 배열객체 준비 :list의 값들을 기로할 객체
+    	JSONArray jarr = new JSONArray();
+    	
+    	//list를 jarr에 옮기기
+    	for(Notice notice : list) {
+    		//notice 저장용 json 객체 준비
+    		JSONObject job = new JSONObject();
+    		
+    		job.put("noticeno", notice.getNoticeno());
+        	//문자열 값 기록시, 한글이 포함되어 있는 경우 인코딩 처리함
+        	job.put("noticetitle", URLEncoder.encode(notice.getNoticetitle(), "utf-8"));
+        	job.put("noticewriter", notice.getNoticewriter());
+        	//날짜데이터는 반드시 문자열로 바꿔서 저장함
+        	job.put("noticedate", notice.getNoticedate().toString());
+        	
+        	jarr.add(job);
+    	}
+    	
+    	//json 배열을 전송용 json 에 저장
+    	sendJson.put("list", jarr);
+    	
+    	return sendJson.toJSONString();	 //jsonView로 보내짐
     }
 }
 
