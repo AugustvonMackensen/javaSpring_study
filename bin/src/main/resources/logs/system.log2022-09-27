@@ -1,0 +1,313 @@
+[11:41:28][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:41:29][WARN ][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSession' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+[11:41:29][ERROR][ContextLoader.java:313] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSession' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:401)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:292)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4768)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5230)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:590)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 42 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:587)
+	... 45 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:376)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 47 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.scanAttributeValue(XMLScanner.java:851)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2708)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 51 more
+[11:41:52][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:41:53][WARN ][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSession' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+[11:41:53][ERROR][ContextLoader.java:313] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSession' defined in class path resource [root-context.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:934)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:401)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:292)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:103)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4768)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5230)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: org.springframework.core.NestedIOException: Failed to parse config resource: class path resource [mybatis-config.xml]; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:590)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 42 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:587)
+	... 45 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error creating document instance.  Cause: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:263)
+	at org.apache.ibatis.parsing.XPathParser.<init>(XPathParser.java:127)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.<init>(XMLMapperBuilder.java:81)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:376)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 47 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 10; columnNumber: 45; Open quote is expected for attribute "property" associated with an  element type  "result".
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1471)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.scanAttributeValue(XMLScanner.java:851)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanAttribute(XMLDocumentFragmentScannerImpl.java:1512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2708)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:534)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:888)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:824)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:246)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.apache.ibatis.parsing.XPathParser.createDocument(XPathParser.java:261)
+	... 51 more
+[11:42:55][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:42:56][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1179 ms
+[11:42:57][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:42:58][INFO ][FrameworkServlet.java:547] - Completed initialization in 1730 ms
+[11:46:12][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:46:14][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1242 ms
+[11:46:14][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:46:15][INFO ][FrameworkServlet.java:547] - Completed initialization in 1720 ms
+[11:46:44][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:46:45][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1244 ms
+[11:46:45][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:46:47][INFO ][FrameworkServlet.java:547] - Completed initialization in 1731 ms
+[11:46:53][INFO ][BoardController.java:35] - btop3.do : 3
+[11:46:53][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:03][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:47:04][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1254 ms
+[11:47:04][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:47:06][INFO ][FrameworkServlet.java:547] - Completed initialization in 1735 ms
+[11:47:08][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:08][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:08][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:08][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:08][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:08][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:09][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:09][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:14][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:14][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:17][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:17][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:20][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:20][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:23][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:23][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:26][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:26][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:29][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:29][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:32][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:32][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:35][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:35][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:38][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:38][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:41][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:41][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:48][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:47:50][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1207 ms
+[11:47:50][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:47:51][INFO ][FrameworkServlet.java:547] - Completed initialization in 1750 ms
+[11:47:53][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:53][INFO ][BoardController.java:35] - btop3.do : 3
+[11:47:53][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:47:53][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:49:38][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:49:39][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1169 ms
+[11:49:39][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:49:41][INFO ][FrameworkServlet.java:547] - Completed initialization in 1748 ms
+[11:49:55][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:49:55][INFO ][BoardController.java:35] - btop3.do : 3
+[11:50:01][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:50:01][INFO ][BoardController.java:35] - btop3.do : 3
+[11:50:04][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:50:04][INFO ][BoardController.java:35] - btop3.do : 3
+[11:50:07][INFO ][BoardController.java:35] - btop3.do : 3
+[11:50:07][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:50:10][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:50:10][INFO ][BoardController.java:35] - btop3.do : 3
+[11:50:13][INFO ][BoardController.java:35] - btop3.do : 3
+[11:50:13][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:50:16][INFO ][BoardController.java:35] - btop3.do : 3
+[11:50:16][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:50:19][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:50:19][INFO ][BoardController.java:35] - btop3.do : 3
+[11:51:01][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:51:03][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1173 ms
+[11:51:03][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:51:04][INFO ][FrameworkServlet.java:547] - Completed initialization in 1661 ms
+[11:51:06][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:51:06][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:51:06][INFO ][BoardController.java:35] - btop3.do : 3
+[11:51:06][INFO ][BoardController.java:35] - btop3.do : 3
+[11:51:06][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:51:06][INFO ][BoardController.java:35] - btop3.do : 3
+[11:51:07][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:51:07][INFO ][BoardController.java:35] - btop3.do : 3
+[11:51:09][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:51:09][INFO ][BoardController.java:35] - btop3.do : 3
+[11:54:05][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:54:06][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1233 ms
+[11:54:06][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:54:08][INFO ][FrameworkServlet.java:547] - Completed initialization in 1790 ms
+[11:54:10][INFO ][BoardController.java:35] - btop3.do : 3
+[11:54:10][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:54:14][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[11:54:14][INFO ][MemberController.java:138] - sessionID : 39EE910FBC85F5632F9987B74C44D04E
+[11:54:14][INFO ][BoardController.java:35] - btop3.do : 3
+[11:54:14][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:54:16][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first/bdetail.do
+[11:54:18][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:54:18][INFO ][BoardController.java:35] - btop3.do : 3
+[11:54:20][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:54:20][INFO ][BoardController.java:35] - btop3.do : 3
+[15:24:25][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:24:26][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1175 ms
+[15:24:26][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:24:28][INFO ][FrameworkServlet.java:547] - Completed initialization in 1692 ms
+[15:24:32][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:24:32][INFO ][BoardController.java:37] - btop3.do : 3
+[15:24:44][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[15:24:44][INFO ][MemberController.java:138] - sessionID : 5C1D2B1E061C501FD6A209D6B90CFF13
+[15:24:44][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:24:44][INFO ][BoardController.java:37] - btop3.do : 3
+[15:27:20][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:27:21][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1240 ms
+[15:27:21][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:27:23][INFO ][FrameworkServlet.java:547] - Completed initialization in 1753 ms
+[15:27:29][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:27:29][INFO ][BoardController.java:37] - btop3.do : 3
+[15:27:37][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first/bdetail.do
+[15:27:41][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first/bdetail.do
+[15:29:23][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:29:24][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1203 ms
+[15:29:24][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:29:26][INFO ][FrameworkServlet.java:547] - Completed initialization in 1816 ms
+[15:29:28][INFO ][BoardController.java:37] - btop3.do : 3
+[15:29:28][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:35:15][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:35:16][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1301 ms
+[15:35:17][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:35:18][INFO ][FrameworkServlet.java:547] - Completed initialization in 1845 ms
+[15:35:20][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:35:20][INFO ][BoardController.java:37] - btop3.do : 3
+[15:36:35][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:36:36][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1204 ms
+[15:36:36][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:36:38][INFO ][FrameworkServlet.java:547] - Completed initialization in 1747 ms
+[15:36:51][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:36:52][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1269 ms
+[15:36:52][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:36:54][INFO ][FrameworkServlet.java:547] - Completed initialization in 1813 ms
+[15:36:56][INFO ][BoardController.java:37] - btop3.do : 3
+[15:36:56][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:37:02][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:37:02][INFO ][BoardController.java:37] - btop3.do : 3

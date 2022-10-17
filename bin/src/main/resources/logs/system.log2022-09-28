@@ -1,0 +1,168 @@
+[10:14:54][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:14:55][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1437 ms
+[10:14:55][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:14:57][INFO ][FrameworkServlet.java:547] - Completed initialization in 2068 ms
+[10:15:04][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:15:04][INFO ][BoardController.java:37] - btop3.do : 3
+[10:16:21][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:16:23][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1222 ms
+[10:16:23][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:16:24][INFO ][FrameworkServlet.java:547] - Completed initialization in 1694 ms
+[10:16:27][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:16:27][INFO ][BoardController.java:37] - btop3.do : 3
+[10:17:32][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:17:33][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1162 ms
+[10:17:33][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:17:35][INFO ][FrameworkServlet.java:547] - Completed initialization in 1696 ms
+[10:17:37][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:17:37][INFO ][BoardController.java:37] - btop3.do : 3
+[10:28:34][INFO ][BoardController.java:37] - btop3.do : 3
+[10:28:34][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:35:38][INFO ][BoardController.java:37] - btop3.do : 3
+[10:35:38][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:35:45][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[10:35:45][INFO ][MemberController.java:138] - sessionID : 90724C7125B7ABD0FBA84F0AEB3345E8
+[10:35:45][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:35:45][INFO ][BoardController.java:37] - btop3.do : 3
+[10:35:47][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first/bdetail.do
+[10:35:48][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:35:48][INFO ][BoardController.java:37] - btop3.do : 3
+[10:35:51][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:35:51][INFO ][BoardController.java:37] - btop3.do : 3
+[10:35:52][INFO ][BoardController.java:37] - btop3.do : 3
+[10:35:52][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:50:58][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:50:59][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1137 ms
+[10:50:59][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:51:01][INFO ][FrameworkServlet.java:547] - Completed initialization in 1716 ms
+[10:51:07][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:51:07][INFO ][BoardController.java:37] - btop3.do : 3
+[10:51:12][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[10:51:12][INFO ][MemberController.java:138] - sessionID : 10B01615CED19E3890D1ED870CA87708
+[10:51:12][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:51:12][INFO ][BoardController.java:37] - btop3.do : 3
+[10:51:15][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:51:15][INFO ][BoardController.java:37] - btop3.do : 3
+[12:25:25][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:25:27][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1232 ms
+[12:25:27][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:25:28][INFO ][FrameworkServlet.java:547] - Completed initialization in 1839 ms
+[12:25:30][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:25:30][INFO ][BoardController.java:40] - btop3.do : 3
+[12:25:37][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:25:37][INFO ][MemberController.java:138] - sessionID : 94F691B175C950A42B8040E7865FDB10
+[12:25:37][INFO ][BoardController.java:40] - btop3.do : 3
+[12:25:37][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:25:44][INFO ][BoardController.java:40] - btop3.do : 3
+[12:25:44][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:28:39][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:28:40][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1152 ms
+[12:28:40][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:28:42][INFO ][FrameworkServlet.java:547] - Completed initialization in 1797 ms
+[12:28:44][INFO ][BoardController.java:40] - btop3.do : 3
+[12:28:44][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:28:47][INFO ][BoardController.java:40] - btop3.do : 3
+[12:28:47][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:28:50][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:28:50][INFO ][MemberController.java:138] - sessionID : 16B362D3B7430CC0F5F682D13FF5DCE7
+[12:28:50][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:28:50][INFO ][BoardController.java:40] - btop3.do : 3
+[12:29:38][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:29:39][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1315 ms
+[12:29:39][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:29:41][INFO ][FrameworkServlet.java:547] - Completed initialization in 1742 ms
+[12:29:43][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:29:43][INFO ][BoardController.java:40] - btop3.do : 3
+[12:29:50][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:29:50][INFO ][BoardController.java:40] - btop3.do : 3
+[12:29:51][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:29:51][INFO ][BoardController.java:40] - btop3.do : 3
+[12:29:58][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:29:58][INFO ][MemberController.java:138] - sessionID : E48346580AD1F75F339183D5053D3205
+[12:29:58][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:29:58][INFO ][BoardController.java:40] - btop3.do : 3
+[12:30:03][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first/bupview.do
+[12:30:21][WARN ][DispatcherServlet.java:1278] - No mapping for POST /first/breply.do
+[12:30:24][WARN ][DispatcherServlet.java:1278] - No mapping for POST /first/breply.do
+[12:38:49][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:38:50][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1234 ms
+[12:38:50][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:38:52][INFO ][FrameworkServlet.java:547] - Completed initialization in 1748 ms
+[12:38:54][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:38:54][INFO ][BoardController.java:40] - btop3.do : 3
+[12:43:44][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:43:45][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1193 ms
+[12:43:46][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:43:47][INFO ][FrameworkServlet.java:547] - Completed initialization in 1761 ms
+[12:43:50][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:43:50][INFO ][BoardController.java:40] - btop3.do : 3
+[12:44:57][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:44:58][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1221 ms
+[12:44:58][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:45:00][INFO ][FrameworkServlet.java:547] - Completed initialization in 1718 ms
+[12:45:02][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:45:02][INFO ][BoardController.java:40] - btop3.do : 3
+[12:46:20][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:46:22][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1262 ms
+[12:46:22][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:46:24][INFO ][FrameworkServlet.java:547] - Completed initialization in 1756 ms
+[12:46:41][INFO ][BoardController.java:40] - btop3.do : 3
+[12:46:41][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:47:41][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:47:42][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1159 ms
+[12:47:42][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:47:44][INFO ][FrameworkServlet.java:547] - Completed initialization in 1775 ms
+[12:47:45][INFO ][BoardController.java:40] - btop3.do : 3
+[12:47:45][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:52:46][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:52:47][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1171 ms
+[14:52:47][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:52:49][INFO ][FrameworkServlet.java:547] - Completed initialization in 1764 ms
+[14:52:58][INFO ][BoardController.java:40] - btop3.do : 3
+[14:52:58][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:53:02][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass01, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[14:53:04][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:53:04][INFO ][BoardController.java:40] - btop3.do : 3
+[14:53:09][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[14:53:09][INFO ][MemberController.java:138] - sessionID : EAA8EC4DFE77D92D70F51982B402C9FA
+[14:53:09][INFO ][BoardController.java:40] - btop3.do : 3
+[14:53:09][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:53:24][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'page' for method parameter type int is not present]
+[14:54:31][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:54:32][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1237 ms
+[14:54:32][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:54:34][INFO ][FrameworkServlet.java:547] - Completed initialization in 1692 ms
+[14:54:36][INFO ][BoardController.java:40] - btop3.do : 3
+[14:54:36][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:54:44][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'page' for method parameter type String is not present]
+[14:55:46][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:55:47][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1289 ms
+[14:55:47][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:55:49][INFO ][FrameworkServlet.java:547] - Completed initialization in 1941 ms
+[14:55:53][INFO ][BoardController.java:40] - btop3.do : 3
+[14:55:53][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:55:58][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'page' for method parameter type int is not present]
+[14:59:38][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:59:39][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1307 ms
+[14:59:39][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:59:41][INFO ][FrameworkServlet.java:547] - Completed initialization in 1920 ms
+[14:59:45][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:59:45][INFO ][BoardController.java:40] - btop3.do : 3
+[15:00:11][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:00:11][INFO ][BoardController.java:40] - btop3.do : 3
+[15:01:03][INFO ][BoardController.java:40] - btop3.do : 3
+[15:01:03][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:04:23][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:04:25][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1198 ms
+[15:04:25][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:04:27][INFO ][FrameworkServlet.java:547] - Completed initialization in 1814 ms
+[15:04:28][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:04:28][INFO ][BoardController.java:40] - btop3.do : 3
+[15:04:42][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:04:42][INFO ][BoardController.java:40] - btop3.do : 3
+[15:04:43][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:04:43][INFO ][BoardController.java:40] - btop3.do : 3
+[15:04:50][INFO ][MemberController.java:122] - login.do : Member [userid=user02, userpwd=pass02, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[15:04:50][INFO ][MemberController.java:138] - sessionID : 0CA03BF1025B4CD1B931FA0DD9F19C13
+[15:04:50][INFO ][NoticeController.java:68] - ntop3.do : 3
+[15:04:50][INFO ][BoardController.java:40] - btop3.do : 3

@@ -1,0 +1,511 @@
+[10:54:20][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:54:21][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1132 ms
+[10:54:21][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:54:23][INFO ][FrameworkServlet.java:547] - Completed initialization in 1641 ms
+[10:54:37][INFO ][BoardController.java:43] - btop3.do : 3
+[10:54:37][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:55:39][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[10:55:39][INFO ][MemberController.java:138] - sessionID : 390AA0B4A38BBE622C1AEB8B4D4618C9
+[10:55:39][INFO ][BoardController.java:43] - btop3.do : 3
+[10:55:39][INFO ][NoticeController.java:68] - ntop3.do : 3
+[10:56:15][INFO ][BoardController.java:235] - binsert.do : MultipartFile[field="upfile", filename=gitportrait.jpg, contentType=image/jpeg, size=149237]
+[10:56:24][INFO ][BoardController.java:235] - binsert.do : MultipartFile[field="upfile", filename=, contentType=application/octet-stream, size=0]
+[10:56:24][ERROR][Slf4jSpyLogDelegator.java:120] - 15. PreparedStatement.execute() insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), '', 'user01', '', sysdate, NULL, 
+			NULL, 1, (select max(board_num) + 1 from board), default, default, default)
+java.sql.SQLIntegrityConstraintViolationException: ORA-01400: NULL을 ("C##STUDENT"."BOARD"."BOARD_TITLE") 안에 삽입할 수 없습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1052)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:537)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:255)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:610)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:253)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:86)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:928)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1136)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3640)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1384)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3752)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy8.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at com.test.first.board.model.dao.BoardDao.insertOriginBoard(BoardDao.java:69)
+	at com.test.first.board.service.BoardServiceImpl.insertOriginBoard(BoardServiceImpl.java:45)
+	at com.test.first.board.controller.BoardController.boardInsertMethod(BoardController.java:276)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: Error : 1400, Position : 260, Sql = insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), :1 , :2 , :3 , sysdate, :4 , 
+			:5 , 1, (select max(board_num) + 1 from board), default, default, default), OriginalSql = insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), ?, ?, ?, sysdate, ?, 
+			?, 1, (select max(board_num) + 1 from board), default, default, default), Error Msg = ORA-01400: NULL을 ("C##STUDENT"."BOARD"."BOARD_TITLE") 안에 삽입할 수 없습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:498)
+	... 75 more
+[10:56:24][ERROR][Slf4jSpyLogDelegator.java:139] - 15. PreparedStatement.execute() FAILED! insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), '', 'user01', '', sysdate, NULL, 
+			NULL, 1, (select max(board_num) + 1 from board), default, default, default) {FAILED after 11 msec}
+java.sql.SQLIntegrityConstraintViolationException: ORA-01400: NULL을 ("C##STUDENT"."BOARD"."BOARD_TITLE") 안에 삽입할 수 없습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1052)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:537)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:255)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:610)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:253)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:86)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:928)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1136)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3640)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1384)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3752)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy8.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at com.test.first.board.model.dao.BoardDao.insertOriginBoard(BoardDao.java:69)
+	at com.test.first.board.service.BoardServiceImpl.insertOriginBoard(BoardServiceImpl.java:45)
+	at com.test.first.board.controller.BoardController.boardInsertMethod(BoardController.java:276)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: Error : 1400, Position : 260, Sql = insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), :1 , :2 , :3 , sysdate, :4 , 
+			:5 , 1, (select max(board_num) + 1 from board), default, default, default), OriginalSql = insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), ?, ?, ?, sysdate, ?, 
+			?, 1, (select max(board_num) + 1 from board), default, default, default), Error Msg = ORA-01400: NULL을 ("C##STUDENT"."BOARD"."BOARD_TITLE") 안에 삽입할 수 없습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:498)
+	... 75 more
+[10:56:28][INFO ][BoardController.java:235] - binsert.do : MultipartFile[field="upfile", filename=, contentType=application/octet-stream, size=0]
+[10:56:28][ERROR][Slf4jSpyLogDelegator.java:120] - 17. PreparedStatement.execute() insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), '', 'user01', '', sysdate, NULL, 
+			NULL, 1, (select max(board_num) + 1 from board), default, default, default)
+java.sql.SQLIntegrityConstraintViolationException: ORA-01400: NULL을 ("C##STUDENT"."BOARD"."BOARD_TITLE") 안에 삽입할 수 없습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1052)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:537)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:255)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:610)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:253)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:86)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:928)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1136)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3640)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1384)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3752)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy8.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at com.test.first.board.model.dao.BoardDao.insertOriginBoard(BoardDao.java:69)
+	at com.test.first.board.service.BoardServiceImpl.insertOriginBoard(BoardServiceImpl.java:45)
+	at com.test.first.board.controller.BoardController.boardInsertMethod(BoardController.java:276)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: Error : 1400, Position : 260, Sql = insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), :1 , :2 , :3 , sysdate, :4 , 
+			:5 , 1, (select max(board_num) + 1 from board), default, default, default), OriginalSql = insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), ?, ?, ?, sysdate, ?, 
+			?, 1, (select max(board_num) + 1 from board), default, default, default), Error Msg = ORA-01400: NULL을 ("C##STUDENT"."BOARD"."BOARD_TITLE") 안에 삽입할 수 없습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:498)
+	... 75 more
+[10:56:28][ERROR][Slf4jSpyLogDelegator.java:139] - 17. PreparedStatement.execute() FAILED! insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), '', 'user01', '', sysdate, NULL, 
+			NULL, 1, (select max(board_num) + 1 from board), default, default, default) {FAILED after 1 msec}
+java.sql.SQLIntegrityConstraintViolationException: ORA-01400: NULL을 ("C##STUDENT"."BOARD"."BOARD_TITLE") 안에 삽입할 수 없습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:494)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:446)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1052)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:537)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:255)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:610)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:253)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:86)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:928)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1136)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3640)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1384)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3752)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1079)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at org.apache.commons.dbcp.DelegatingPreparedStatement.execute(DelegatingPreparedStatement.java:172)
+	at net.sf.log4jdbc.PreparedStatementSpy.execute(PreparedStatementSpy.java:418)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy8.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at com.test.first.board.model.dao.BoardDao.insertOriginBoard(BoardDao.java:69)
+	at com.test.first.board.service.BoardServiceImpl.insertOriginBoard(BoardServiceImpl.java:45)
+	at com.test.first.board.controller.BoardController.boardInsertMethod(BoardController.java:276)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: Error : 1400, Position : 260, Sql = insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), :1 , :2 , :3 , sysdate, :4 , 
+			:5 , 1, (select max(board_num) + 1 from board), default, default, default), OriginalSql = insert into board (board_num, board_title, board_writer, board_content, board_date, board_original_filename,
+			board_rename_filename, board_lev, board_ref, board_reply_ref, board_reply_seq, board_readcount)
+			values ((select max(board_num) + 1 from board), ?, ?, ?, sysdate, ?, 
+			?, 1, (select max(board_num) + 1 from board), default, default, default), Error Msg = ORA-01400: NULL을 ("C##STUDENT"."BOARD"."BOARD_TITLE") 안에 삽입할 수 없습니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:498)
+	... 75 more
+[10:56:35][INFO ][BoardController.java:235] - binsert.do : MultipartFile[field="upfile", filename=gitportrait.jpg, contentType=image/jpeg, size=149237]
+[10:57:43][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:57:44][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1187 ms
+[10:57:44][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:57:46][INFO ][FrameworkServlet.java:547] - Completed initialization in 1720 ms
+[10:58:00][INFO ][BoardController.java:235] - binsert.do : MultipartFile[field="upfile", filename=namecard4.jpg, contentType=image/jpeg, size=302549]
+[11:02:00][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:02:01][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1142 ms
+[11:02:01][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:02:03][INFO ][FrameworkServlet.java:547] - Completed initialization in 1770 ms
+[11:06:24][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:06:25][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1322 ms
+[11:06:25][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:06:27][INFO ][FrameworkServlet.java:547] - Completed initialization in 1824 ms
+[11:06:30][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:06:30][INFO ][BoardController.java:43] - btop3.do : 3
+[11:06:43][INFO ][BoardController.java:235] - binsert.do : MultipartFile[field="upfile", filename=namecard4.jpg, contentType=image/jpeg, size=302549]
+[11:12:18][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:12:19][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1251 ms
+[11:12:20][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:12:21][INFO ][FrameworkServlet.java:547] - Completed initialization in 1755 ms
+[11:12:32][INFO ][NoticeController.java:68] - ntop3.do : 3
+[11:12:32][INFO ][BoardController.java:43] - btop3.do : 3
+[11:12:45][INFO ][BoardController.java:235] - binsert.do : MultipartFile[field="upfile", filename=namecard1 (2).jpg, contentType=image/jpeg, size=269134]
+[12:05:58][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:05:59][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1151 ms
+[12:05:59][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:06:01][INFO ][FrameworkServlet.java:547] - Completed initialization in 1791 ms
+[12:06:03][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:06:03][INFO ][BoardController.java:43] - btop3.do : 3
+[12:06:08][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:06:08][INFO ][MemberController.java:138] - sessionID : 94F0FD0DF2DB44DFFB64F8B7DC348F3F
+[12:06:08][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:06:08][INFO ][BoardController.java:43] - btop3.do : 3
+[12:07:04][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:07:04][INFO ][BoardController.java:43] - btop3.do : 3
+[12:07:06][INFO ][BoardController.java:43] - btop3.do : 3
+[12:07:06][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:07:09][INFO ][MemberController.java:122] - login.do : Member [userid=user02, userpwd=pass02, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:07:09][INFO ][MemberController.java:138] - sessionID : 457D46FCE692AC085B3821017DA874E0
+[12:07:09][INFO ][NoticeController.java:68] - ntop3.do : 3
+[12:07:09][INFO ][BoardController.java:43] - btop3.do : 3
+[13:00:13][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:00:15][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1348 ms
+[13:00:15][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:00:17][INFO ][FrameworkServlet.java:547] - Completed initialization in 1964 ms
+[13:00:20][INFO ][NoticeController.java:68] - ntop3.do : 3
+[13:00:20][INFO ][BoardController.java:43] - btop3.do : 3
+[13:00:25][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[13:00:25][INFO ][MemberController.java:138] - sessionID : 7DA5AA07C6D1529CEFE01CF0D0EC593B
+[13:00:25][INFO ][BoardController.java:43] - btop3.do : 3
+[13:00:25][INFO ][NoticeController.java:68] - ntop3.do : 3
+[13:02:07][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:02:08][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1211 ms
+[13:02:08][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:02:10][INFO ][FrameworkServlet.java:547] - Completed initialization in 1845 ms
+[13:02:11][INFO ][BoardController.java:43] - btop3.do : 3
+[13:02:11][INFO ][NoticeController.java:68] - ntop3.do : 3
+[13:13:03][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:13:05][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1211 ms
+[13:13:05][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:13:06][INFO ][FrameworkServlet.java:547] - Completed initialization in 1838 ms
+[13:13:08][INFO ][NoticeController.java:68] - ntop3.do : 3
+[13:13:08][INFO ][BoardController.java:43] - btop3.do : 3
+[13:13:14][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[13:13:14][INFO ][MemberController.java:138] - sessionID : AF0BC64F5D9790C0F214472C0A0C5538
+[13:13:14][INFO ][BoardController.java:43] - btop3.do : 3
+[13:13:14][INFO ][NoticeController.java:68] - ntop3.do : 3
+[13:13:30][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'board' on field 'board_ref': rejected value []; codes [typeMismatch.board.board_ref,typeMismatch.board_ref,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [board.board_ref,board_ref]; arguments []; default message [board_ref]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'board_ref'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+[13:15:53][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:15:54][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1211 ms
+[13:15:54][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:15:56][INFO ][FrameworkServlet.java:547] - Completed initialization in 1816 ms
+[13:15:58][INFO ][BoardController.java:43] - btop3.do : 3
+[13:15:58][INFO ][NoticeController.java:68] - ntop3.do : 3
+[13:16:07][WARN ][AbstractHandlerExceptionResolver.java:208] - Resolved [org.springframework.validation.BindException: org.springframework.validation.BeanPropertyBindingResult: 1 errors<EOL>Field error in object 'board' on field 'board_num': rejected value []; codes [typeMismatch.board.board_num,typeMismatch.board_num,typeMismatch.int,typeMismatch]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [board.board_num,board_num]; arguments []; default message [board_num]]; default message [Failed to convert property value of type 'java.lang.String' to required type 'int' for property 'board_num'; nested exception is java.lang.NumberFormatException: For input string: ""]]
+[13:19:52][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:19:54][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1231 ms
+[13:19:54][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:19:56][INFO ][FrameworkServlet.java:547] - Completed initialization in 1793 ms
+[13:19:57][INFO ][NoticeController.java:68] - ntop3.do : 3
+[13:19:57][INFO ][BoardController.java:43] - btop3.do : 3
+[13:20:38][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:20:39][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1265 ms
+[13:20:39][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:20:41][INFO ][FrameworkServlet.java:547] - Completed initialization in 1778 ms
+[14:23:21][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:23:21][INFO ][BoardController.java:43] - btop3.do : 3
+[14:34:32][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:34:33][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1159 ms
+[14:34:33][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:34:35][INFO ][FrameworkServlet.java:547] - Completed initialization in 1744 ms
+[14:34:43][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass01, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[14:34:45][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass01, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[14:34:50][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[14:34:50][INFO ][MemberController.java:138] - sessionID : 6E864BD83FE7951A22E8054B8A08F37E
+[14:34:50][INFO ][BoardController.java:43] - btop3.do : 3
+[14:34:50][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:38:26][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:38:27][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1175 ms
+[14:38:27][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:38:29][INFO ][FrameworkServlet.java:547] - Completed initialization in 1804 ms
+[14:38:32][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:38:32][INFO ][BoardController.java:43] - btop3.do : 3
+[14:47:48][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:47:49][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1192 ms
+[14:47:49][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:47:51][INFO ][FrameworkServlet.java:547] - Completed initialization in 1751 ms
+[14:47:53][INFO ][BoardController.java:43] - btop3.do : 3
+[14:47:53][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:49:32][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:49:33][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1223 ms
+[14:49:33][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:49:35][INFO ][FrameworkServlet.java:547] - Completed initialization in 1830 ms
+[14:49:43][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:49:43][INFO ][BoardController.java:43] - btop3.do : 3
+[14:49:48][INFO ][BoardController.java:235] - binsert.do : MultipartFile[field="upfile", filename=, contentType=application/octet-stream, size=0]
+[14:51:21][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:51:22][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1177 ms
+[14:51:22][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:53:52][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:53:54][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1178 ms
+[14:53:54][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:53:55][INFO ][FrameworkServlet.java:547] - Completed initialization in 1723 ms
+[14:53:57][INFO ][NoticeController.java:68] - ntop3.do : 3
+[14:53:57][INFO ][BoardController.java:43] - btop3.do : 3
+[14:54:07][INFO ][MemberController.java:122] - login.do : Member [userid=user01, userpwd=pass1234, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[14:54:07][INFO ][MemberController.java:138] - sessionID : 14D2A77BD508E957C91DD5EBF55C99C6
+[14:54:07][INFO ][BoardController.java:43] - btop3.do : 3
+[14:54:07][INFO ][NoticeController.java:68] - ntop3.do : 3

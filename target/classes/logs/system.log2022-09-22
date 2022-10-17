@@ -1,0 +1,91 @@
+[14:25:24][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:25:25][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 972 ms
+[14:25:25][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:25:26][INFO ][FrameworkServlet.java:547] - Completed initialization in 1369 ms
+[14:25:33][INFO ][NoticeController.java:44] - ntop3.do : 3
+[14:25:35][INFO ][NoticeController.java:44] - ntop3.do : 3
+[14:25:38][INFO ][NoticeController.java:44] - ntop3.do : 3
+[14:25:41][INFO ][NoticeController.java:44] - ntop3.do : 3
+[14:25:44][INFO ][NoticeController.java:44] - ntop3.do : 3
+[14:25:48][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[14:25:48][INFO ][MemberController.java:138] - sessionID : 61D698B621A42FC7F1624B50C452F7D0
+[14:25:51][INFO ][NoticeController.java:44] - ntop3.do : 3
+[14:25:54][INFO ][NoticeController.java:44] - ntop3.do : 3
+[14:57:16][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:57:17][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 871 ms
+[14:57:17][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:57:18][INFO ][FrameworkServlet.java:547] - Completed initialization in 1391 ms
+[14:57:23][INFO ][NoticeController.java:45] - ntop3.do : 3
+[14:57:32][WARN ][DispatcherServlet.java:1278] - No mapping for POST /first/nsearchWriter.do
+[14:57:48][WARN ][DispatcherServlet.java:1278] - No mapping for POST /first/nsearchWriter.do
+[14:58:02][WARN ][DispatcherServlet.java:1278] - No mapping for POST /first/nsearchWriter.do
+[14:58:08][WARN ][DispatcherServlet.java:1278] - No mapping for POST /first/nsearchDate.do
+[15:00:42][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:00:43][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 863 ms
+[15:00:43][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:00:44][INFO ][FrameworkServlet.java:547] - Completed initialization in 1256 ms
+[15:02:51][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:02:52][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 860 ms
+[15:02:52][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:02:54][INFO ][FrameworkServlet.java:547] - Completed initialization in 1310 ms
+[15:03:43][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:03:44][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 856 ms
+[15:03:44][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:03:45][INFO ][FrameworkServlet.java:547] - Completed initialization in 1235 ms
+[16:10:58][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[16:10:59][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 880 ms
+[16:10:59][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[16:11:01][INFO ][FrameworkServlet.java:547] - Completed initialization in 1361 ms
+[16:11:10][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:11:41][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:11:44][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:11:47][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:12:54][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:12:57][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:13:00][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:13:03][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:13:06][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:13:09][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:13:12][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:13:15][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:22:44][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[16:22:45][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 811 ms
+[16:22:45][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[16:22:46][INFO ][FrameworkServlet.java:547] - Completed initialization in 1242 ms
+[16:22:48][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:22:48][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:22:48][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:22:50][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[16:22:51][INFO ][MemberController.java:138] - sessionID : C19A09DB713E2D48F39F57D1715DDB40
+[16:22:54][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:25:47][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[16:25:48][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 868 ms
+[16:25:48][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[16:25:49][INFO ][FrameworkServlet.java:547] - Completed initialization in 1331 ms
+[16:25:55][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[16:25:56][INFO ][MemberController.java:138] - sessionID : 670CFE37EBDE524948B036DC30A68726
+[16:25:59][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:28:35][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[16:28:36][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 847 ms
+[16:28:36][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[16:28:38][INFO ][FrameworkServlet.java:547] - Completed initialization in 1295 ms
+[16:28:42][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:28:56][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:28:56][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:29:15][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[16:29:15][INFO ][MemberController.java:138] - sessionID : 889DF71C69BD644E8571197DA5123056
+[16:29:19][INFO ][NoticeController.java:48] - ntop3.do : 3
+[16:58:26][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[16:58:27][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 783 ms
+[16:58:27][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[16:58:28][INFO ][FrameworkServlet.java:547] - Completed initialization in 1215 ms
+[16:58:40][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[16:58:41][INFO ][MemberController.java:138] - sessionID : C1022ED225A9ED6BE707F9AC0A916E60
+[16:58:44][INFO ][NoticeController.java:50] - ntop3.do : 3
+[16:58:47][INFO ][NoticeController.java:50] - ntop3.do : 3
+[17:02:16][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[17:02:17][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 811 ms
+[17:02:17][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[17:02:18][INFO ][FrameworkServlet.java:547] - Completed initialization in 1256 ms
+[17:02:27][INFO ][NoticeController.java:50] - ntop3.do : 3
+[17:02:47][INFO ][NoticeController.java:50] - ntop3.do : 3

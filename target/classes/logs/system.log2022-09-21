@@ -1,0 +1,769 @@
+[09:36:22][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[09:36:23][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 988 ms
+[09:36:23][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[09:36:24][INFO ][FrameworkServlet.java:547] - Completed initialization in 1153 ms
+[09:36:29][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[09:36:30][INFO ][MemberController.java:138] - sessionID : C4DB109ED5D96CA4E92CD2E89AABBC13
+[09:36:35][INFO ][MemberController.java:298] - loginok.do : user01, Y
+[10:37:44][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:37:45][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 852 ms
+[10:37:45][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:37:46][INFO ][FrameworkServlet.java:547] - Completed initialization in 1132 ms
+[10:51:50][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[10:51:51][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 814 ms
+[10:51:51][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[10:51:52][INFO ][FrameworkServlet.java:547] - Completed initialization in 1134 ms
+[12:37:23][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:37:24][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 868 ms
+[12:37:24][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:37:26][INFO ][FrameworkServlet.java:547] - Completed initialization in 1271 ms
+[12:41:49][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:41:49][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 792 ms
+[12:41:49][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:41:51][WARN ][AbstractApplicationContext.java:591] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'noticeController' defined in file [C:\framework_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\first\WEB-INF\classes\com\test\first\notice\controller\NoticeController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.test.first.notice.controller.NoticeController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Type mismatch: cannot convert from org.slf4j.Logger to java.util.logging.Logger
+	Syntax error, insert ";" to complete ClassBodyDeclarations
+
+[12:41:51][ERROR][FrameworkServlet.java:534] - Context initialization failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'noticeController' defined in file [C:\framework_workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\first\WEB-INF\classes\com\test\first\notice\controller\NoticeController.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.test.first.notice.controller.NoticeController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Type mismatch: cannot convert from org.slf4j.Logger to java.util.logging.Logger
+	Syntax error, insert ";" to complete ClassBodyDeclarations
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:702)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:668)
+	at org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:716)
+	at org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:591)
+	at org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:530)
+	at org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:170)
+	at javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	at org.apache.catalina.core.StandardWrapper.initServlet(StandardWrapper.java:1164)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1117)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1010)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4957)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5264)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:345)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:476)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.test.first.notice.controller.NoticeController]: Constructor threw exception; nested exception is java.lang.Error: Unresolved compilation problems: 
+	Type mismatch: cannot convert from org.slf4j.Logger to java.util.logging.Logger
+	Syntax error, insert ";" to complete ClassBodyDeclarations
+
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 50 more
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Type mismatch: cannot convert from org.slf4j.Logger to java.util.logging.Logger
+	Syntax error, insert ";" to complete ClassBodyDeclarations
+
+	at com.test.first.notice.controller.NoticeController.<init>(NoticeController.java:20)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 52 more
+[12:48:04][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:48:05][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 894 ms
+[12:48:05][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:48:06][INFO ][FrameworkServlet.java:547] - Completed initialization in 1224 ms
+[12:49:51][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:49:52][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 819 ms
+[12:49:52][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:49:53][INFO ][FrameworkServlet.java:547] - Completed initialization in 1214 ms
+[12:49:59][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:01][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:04][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:07][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:10][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:13][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:16][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:19][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:22][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:25][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:28][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:31][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:34][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:37][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:40][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:43][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:46][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:49][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:52][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:55][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:50:58][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:51:01][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:51:04][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:51:07][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:51:10][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:51:13][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:51:16][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:51:19][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:51:22][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:51:25][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:18][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:52:19][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 958 ms
+[12:52:19][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:52:21][INFO ][FrameworkServlet.java:547] - Completed initialization in 1260 ms
+[12:52:26][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:28][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:31][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:34][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:37][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:40][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:43][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:46][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:49][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:52][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:55][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:52:58][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:53:01][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:53:04][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:53:07][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:53:10][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:53:13][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:53:16][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:53:19][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:53:22][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:31][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:55:32][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 860 ms
+[12:55:32][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:55:33][INFO ][FrameworkServlet.java:547] - Completed initialization in 1241 ms
+[12:55:35][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:35][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:35][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:38][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:41][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:44][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:47][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:50][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:53][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:56][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:55:59][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:56:43][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:56:44][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 866 ms
+[12:56:44][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:56:45][INFO ][FrameworkServlet.java:547] - Completed initialization in 1217 ms
+[12:56:46][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:56:46][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:56:46][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:56:49][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:56:52][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:56:55][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:56:59][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:02][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:28][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:57:29][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 809 ms
+[12:57:29][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:57:31][INFO ][FrameworkServlet.java:547] - Completed initialization in 1226 ms
+[12:57:32][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:32][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:32][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:32][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:35][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:39][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:42][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:45][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:48][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:51][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:54][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:57:57][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:58:00][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:58:03][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:58:06][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:58:09][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:58:12][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:58:15][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:58:18][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:58:21][INFO ][NoticeController.java:31] - ntop3.do : 3
+[12:58:24][INFO ][NoticeController.java:31] - ntop3.do : 3
+[13:01:36][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:01:37][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 869 ms
+[13:01:37][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:01:38][INFO ][FrameworkServlet.java:547] - Completed initialization in 1232 ms
+[13:01:39][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:39][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:39][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:39][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:41][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:42][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:44][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:45][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:47][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:48][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:50][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:51][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:53][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:54][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:56][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:57][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:01:59][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:00][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:02][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:03][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:05][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:06][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:08][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:09][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:11][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:12][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:15][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:54][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:02:55][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 840 ms
+[13:02:55][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:02:56][INFO ][FrameworkServlet.java:547] - Completed initialization in 1244 ms
+[13:02:57][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:57][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:57][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:02:57][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:00][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:00][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:03][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:03][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:06][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:06][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:09][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:09][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:52][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:03:53][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 810 ms
+[13:03:53][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:03:54][INFO ][FrameworkServlet.java:547] - Completed initialization in 1187 ms
+[13:03:56][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:56][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:56][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:03:59][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:04:02][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:04:05][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:04:08][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:04:11][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:04:14][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:04:17][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:08:40][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:08:41][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 822 ms
+[13:08:41][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:08:42][INFO ][FrameworkServlet.java:547] - Completed initialization in 1294 ms
+[13:08:43][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:08:43][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:08:43][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:08:43][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:08:43][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:08:47][INFO ][NoticeController.java:33] - ntop3.do : 3
+[13:08:48][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first/ndetail.do
+[14:22:22][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:22:22][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 838 ms
+[14:22:23][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:22:24][INFO ][FrameworkServlet.java:547] - Completed initialization in 1305 ms
+[14:22:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:30][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:33][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:36][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:39][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:42][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:45][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:48][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:51][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:54][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:22:57][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:23:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:27][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:30][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:33][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:36][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:39][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:42][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:45][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:48][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:51][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:54][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:24:57][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:00][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:03][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:06][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:09][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:12][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:15][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:18][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:21][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:24][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:27][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:30][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:33][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:25:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:26:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:27:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:28:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:29:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:54][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:30:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:31:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:32:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:33:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:34:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:35:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:36:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:16][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:19][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:22][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:25][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:28][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:31][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:34][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:37][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:40][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:43][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:46][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:49][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:52][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:55][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:37:58][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:38:01][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:38:04][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:38:07][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:38:10][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:38:13][INFO ][NoticeController.java:34] - ntop3.do : 3
+[14:38:26][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:38:26][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 656 ms
+[14:38:26][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:38:27][INFO ][FrameworkServlet.java:547] - Completed initialization in 1075 ms
+[14:38:39][INFO ][NoticeController.java:34] - ntop3.do : 3
+[15:36:13][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:36:14][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 855 ms
+[15:36:14][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:36:15][INFO ][FrameworkServlet.java:547] - Completed initialization in 1223 ms
+[15:36:28][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:36:29][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:36:32][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:36:35][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:36:47][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:36:48][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 985 ms
+[15:36:48][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:36:49][INFO ][FrameworkServlet.java:547] - Completed initialization in 1469 ms
+[15:36:50][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:36:50][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:36:50][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:36:53][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:36:56][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:36:59][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:02][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:05][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:08][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:11][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:14][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:17][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:20][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:31][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:37:32][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 842 ms
+[15:37:32][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:37:33][INFO ][FrameworkServlet.java:547] - Completed initialization in 1268 ms
+[15:37:34][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:34][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:34][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:35][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:38][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:38][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:41][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:44][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:47][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:37:52][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[15:37:52][INFO ][MemberController.java:138] - sessionID : E94AE16A08D0448FD1C8930C2DA47AF7
+[15:38:19][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:22][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:25][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:28][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:31][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:34][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:37][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:38][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:40][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:43][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:46][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:49][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:52][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:55][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:38:58][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:01][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:04][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:07][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:10][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:13][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:16][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:19][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:22][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:25][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:28][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:31][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:34][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:37][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:38][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:40][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:43][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:46][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:49][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:52][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:55][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:39:58][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:01][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:04][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:09][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:40:10][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 677 ms
+[15:40:10][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:40:11][INFO ][FrameworkServlet.java:547] - Completed initialization in 1163 ms
+[15:40:12][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:12][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:13][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:16][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:19][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:22][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:25][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:28][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:31][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:34][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:37][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:38][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:40][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:43][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:46][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:49][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:52][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:55][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:40:58][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:01][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:04][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:07][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:10][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:13][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:16][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:19][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:22][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:25][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:28][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:31][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:34][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:37][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:38][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:40][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:43][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:46][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:49][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:52][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:55][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:41:58][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:01][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:04][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:07][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:10][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:13][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:16][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:19][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:22][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:25][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:28][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:31][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:34][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:37][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:38][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:40][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:43][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:46][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:49][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:52][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:55][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:42:58][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:43:01][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:43:04][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:58:33][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:58:34][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 863 ms
+[15:58:34][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:58:36][INFO ][FrameworkServlet.java:547] - Completed initialization in 1197 ms
+[15:58:37][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:58:37][INFO ][NoticeController.java:44] - ntop3.do : 3
+[15:58:37][INFO ][NoticeController.java:44] - ntop3.do : 3
+[16:00:02][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[16:00:03][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 820 ms
+[16:00:03][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[16:00:05][INFO ][FrameworkServlet.java:547] - Completed initialization in 1493 ms
+[16:00:17][WARN ][DispatcherServlet.java:1278] - No mapping for POST /first/nsearchTitle.do

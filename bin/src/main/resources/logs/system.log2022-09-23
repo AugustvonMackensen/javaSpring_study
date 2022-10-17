@@ -1,0 +1,83 @@
+[11:08:41][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:08:42][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 978 ms
+[11:08:43][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:08:44][INFO ][FrameworkServlet.java:547] - Completed initialization in 1299 ms
+[11:08:49][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[11:08:50][INFO ][MemberController.java:138] - sessionID : 2259F6C9B812662BE1DFC01AB14E88D3
+[11:08:53][INFO ][NoticeController.java:54] - ntop3.do : 3
+[11:12:33][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:12:34][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 820 ms
+[11:12:34][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:12:35][INFO ][FrameworkServlet.java:547] - Completed initialization in 1225 ms
+[11:12:39][INFO ][NoticeController.java:54] - ntop3.do : 3
+[11:16:49][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:16:50][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 882 ms
+[11:16:50][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:16:51][INFO ][FrameworkServlet.java:547] - Completed initialization in 1254 ms
+[11:17:18][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:17:19][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 846 ms
+[11:17:19][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:17:20][INFO ][FrameworkServlet.java:547] - Completed initialization in 1261 ms
+[11:17:24][INFO ][NoticeController.java:54] - ntop3.do : 3
+[11:17:39][INFO ][NoticeController.java:195] - ninsert.do : null
+[11:49:38][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:49:39][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 804 ms
+[11:49:39][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:49:40][INFO ][FrameworkServlet.java:547] - Completed initialization in 1318 ms
+[11:49:45][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[11:49:46][INFO ][MemberController.java:138] - sessionID : 538F1B8CA96454810460DA5E7D10FC46
+[11:49:59][INFO ][NoticeController.java:195] - ninsert.do : MultipartFile[field="upfile", filename=일해라핫산.txt, contentType=text/plain, size=29]
+[11:58:52][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[11:58:53][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 847 ms
+[11:58:53][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[11:58:54][INFO ][FrameworkServlet.java:547] - Completed initialization in 1254 ms
+[11:58:59][INFO ][NoticeController.java:54] - ntop3.do : 3
+[11:59:08][INFO ][NoticeController.java:195] - ninsert.do : MultipartFile[field="upfile", filename=일해라핫산.txt, contentType=text/plain, size=29]
+[12:01:53][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:01:54][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 829 ms
+[12:01:54][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:01:55][INFO ][FrameworkServlet.java:547] - Completed initialization in 1284 ms
+[12:02:00][INFO ][NoticeController.java:54] - ntop3.do : 3
+[12:02:02][INFO ][NoticeController.java:54] - ntop3.do : 3
+[12:02:11][INFO ][NoticeController.java:195] - ninsert.do : MultipartFile[field="upfile", filename=일해라핫산.txt, contentType=text/plain, size=29]
+[12:02:15][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first/nfdown.do
+[12:23:03][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[12:23:04][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 852 ms
+[12:23:04][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[12:23:05][INFO ][FrameworkServlet.java:547] - Completed initialization in 1320 ms
+[12:23:10][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[12:23:11][INFO ][MemberController.java:138] - sessionID : E3FE80D581D80CAD70F2C2038F43E9B8
+[12:23:36][INFO ][NoticeController.java:195] - ninsert.do : MultipartFile[field="upfile", filename=namecard1.jpg, contentType=image/jpeg, size=269134]
+[12:23:40][WARN ][DispatcherServlet.java:1278] - No mapping for GET /first/nfdown.do
+[13:03:46][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[13:03:48][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1244 ms
+[13:03:48][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[13:03:49][INFO ][FrameworkServlet.java:547] - Completed initialization in 1787 ms
+[14:53:10][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:53:11][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1253 ms
+[14:53:11][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:53:13][INFO ][FrameworkServlet.java:547] - Completed initialization in 1801 ms
+[14:54:00][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[14:54:01][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1290 ms
+[14:54:01][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[14:54:03][INFO ][FrameworkServlet.java:547] - Completed initialization in 1769 ms
+[15:02:06][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[15:02:08][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1267 ms
+[15:02:08][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[15:02:09][INFO ][FrameworkServlet.java:547] - Completed initialization in 1741 ms
+[15:02:15][INFO ][NoticeController.java:53] - ntop3.do : 3
+[15:02:17][INFO ][NoticeController.java:53] - ntop3.do : 3
+[15:02:24][INFO ][NoticeController.java:53] - ntop3.do : 3
+[15:02:27][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[15:02:27][INFO ][MemberController.java:138] - sessionID : D0B93712CBCCF7A4251345ECDB730228
+[15:03:00][INFO ][NoticeController.java:194] - ninsert.do : MultipartFile[field="upfile", filename=일해라핫산.txt, contentType=text/plain, size=29]
+[15:03:14][INFO ][NoticeController.java:194] - ninsert.do : MultipartFile[field="upfile", filename=namecard1.jpg, contentType=image/jpeg, size=269134]
+[15:07:39][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[15:07:39][INFO ][MemberController.java:138] - sessionID : BB28B20778C571E08D0339D538BD0897
+[16:31:59][INFO ][ContextLoader.java:271] - Root WebApplicationContext: initialization started
+[16:32:01][INFO ][ContextLoader.java:307] - Root WebApplicationContext initialized in 1251 ms
+[16:32:01][INFO ][FrameworkServlet.java:525] - Initializing Servlet 'appServlet'
+[16:32:03][INFO ][FrameworkServlet.java:547] - Completed initialization in 1796 ms
+[16:32:10][INFO ][NoticeController.java:68] - ntop3.do : 3
+[16:32:14][INFO ][MemberController.java:122] - login.do : Member [userid=admin, userpwd=admin, username=null, gender=null, age=0, phone=null, email=null, hobby=null, etc=null, enroll_date=null, lastmodified=null, login_ok=null, admin=null]
+[16:32:14][INFO ][MemberController.java:138] - sessionID : C6646F8DFE2E433792724406BB02BDA0
