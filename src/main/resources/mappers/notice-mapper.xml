@@ -58,6 +58,12 @@
 		where noticeno = #{ noticeno }
 	</select>
 	
+	<select id="selectLast" resultMap="resultNotice">
+		select * from notice
+		where noticeno = (select max(noticeno) 
+						from notice)
+	</select>
+	
 	<delete id="deleteNotice" parameterType="_int">
 		delete from notice
 		where noticeno = #{ noticeno }
@@ -83,4 +89,5 @@
 			</if>
 		where noticeno = #{ noticeno }
 	</update>
+	
 </mapper>

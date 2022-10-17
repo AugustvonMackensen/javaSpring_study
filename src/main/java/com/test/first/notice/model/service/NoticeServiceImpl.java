@@ -59,4 +59,9 @@ public class NoticeServiceImpl implements NoticeService{
 		return noticeDao.selectSearchDate(date);
 	}
 
+	@Override
+	public Notice selectLast() {
+		return noticeDao.selectLast();
+	}
+
 }

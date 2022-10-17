@@ -61,4 +61,8 @@ public class NoticeDao {
 	public int updateNotice(Notice notice) {
 		return session.update("noticeMapper.updateNotice", notice);
 	}
+
+	public Notice selectLast() {
+		return session.selectOne("noticeMapper.selectLast");
+	}
 }

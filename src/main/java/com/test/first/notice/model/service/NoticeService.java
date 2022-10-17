@@ -15,4 +15,5 @@ public interface NoticeService {
 	ArrayList<Notice> selectSearchTitle(String keyword);
 	ArrayList<Notice> selectSearchWriter(String keyword);
 	ArrayList<Notice> selectSearchDate(SearchDate date);
+	Notice selectLast();
 }
