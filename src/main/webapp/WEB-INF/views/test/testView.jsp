@@ -19,6 +19,7 @@
 <h2><a href="${ pageContext.servletContext.contextPath }/testJSON.do">테스트 JSON</a></h2>
 <h2><a href="${ pageContext.servletContext.contextPath }/testJS.do">javascript ajax</a></h2>
 <h2><a href="${ pageContext.servletContext.contextPath }/testJQuery.do">jquery ajax</a></h2>
+<h2><a href="${ pageContext.servletContext.contextPath }/testAjaxFile.do">ajax fileup/download</a></h2>
 
 
 </body>

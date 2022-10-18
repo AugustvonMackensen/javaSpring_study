@@ -1,5 +1,6 @@
 package com.test.first.test.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
@@ -24,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.test.first.notice.model.service.NoticeService;
 import com.test.first.notice.model.vo.Notice;
@@ -55,6 +57,29 @@ public class TestController {
         return "test/testJQueryView";
     }
     
+    @RequestMapping(value="testAjaxFile.do", method= {RequestMethod.GET, RequestMethod.POST})
+    public String testAjaxFileViewMethod() {
+    	return "test/testAjaxFileView";
+    }
+    
+    //ajax file upload
+    @RequestMapping(value="testFileUp.do", method=RequestMethod.POST)
+    public void testFileUploadMethod(HttpServletRequest request,
+    		HttpServletResponse response,
+    		@RequestParam("message") String message,
+    		@RequestParam(name="upfile", required=false) MultipartFile file) throws IllegalStateException, IOException {
+    	 
+    	logger.info("message : " + message);
+    	logger.info("file : " + file.getOriginalFilename());
+    	
+    	//파일 저장폴더에 대한 저장경로 지정
+    	String savePath = request.getSession().getServletContext().getRealPath("resources/test_files");
+    	
+    	//업로드된 파일을 폴더로 옮기기
+    	file.transferTo(new File(savePath + "\\" + file.getOriginalFilename()));
+    	
+    	response.getWriter().append("ok").flush();
+    }
     //ajax test ----------------------------------------------
     @RequestMapping("test1.do")
     @ResponseBody //문자 응답시에는 생략해도 상관없음.
