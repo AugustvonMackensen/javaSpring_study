@@ -208,7 +208,36 @@ public class TestController {
     		return new ResponseEntity<String>("failed", HttpStatus.REQUEST_TIMEOUT);
     	}
 		
+    }
+    
+    @RequestMapping(value="test6.do", method=RequestMethod.POST)
+    public ResponseEntity<String> Test6Method(@RequestBody String param) throws ParseException {
+    	//post 로 request body 에 기록된 json 문자열을 꺼내서
+    	//param 변수에 저장함
     	
+    	logger.info("test6.do run...");
+    	
+    	//param에 저장된 json문자열을 json array 객체로 바꿈
+    	JSONParser jparser = new JSONParser();
+    	
+    	JSONArray jarr = (JSONArray) jparser.parse(param);
+    	
+    	//json 객체가 가진 각 필드값을 추출해서 vo 객체에 저장
+    	Notice notice = new Notice();
+    	notice.setNoticetitle((String) jarr.get("ntitle"));
+    	notice.setNoticewriter((String) jarr.get("nwriter"));
+    	notice.setNoticecontent((String) jarr.get("ncontent"));
+    	
+    	int result = noticeService.insertNotice(notice);
+    	
+    	//ResponseEntity<String> : 클라이언트에게 응답하는 용도의 객체
+    	//뷰리졸버가 아닌 출력스트림으로 나감
+    	if(result > 0) {
+    		return new ResponseEntity<String>("success", HttpStatus.OK);
+    	} else {
+    		return new ResponseEntity<String>("failed", HttpStatus.REQUEST_TIMEOUT);
+    	}
+		
     }
 }
 

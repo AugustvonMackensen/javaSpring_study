@@ -214,11 +214,67 @@
 	</script>
 	<hr>
 	
-	<h2>6. 서버로 전송값 없고, 결과로 문자열 받아 출력 : get 방식</h2>
-	<p id="p6" style="width:300px; height:50px; border:1px solid red;"></p>
+	<h2>6. 서버로 json 배열 보내기</h2>
+	<div>
+		<fieldset>
+			<legend>공지글 여러 개 한번에 등록하기</legend>
+			제목 : <input type="text" id="ntitle"><br>
+			작성자 : <input type="text" id="nwriter" value="admin"><br>
+			내용 : <textarea rows="5" cols="30" id="ncontent"></textarea>
+		</fieldset>
+		<input type="button" id="addBtn" value="추가하기">
+	</div>
+	<p id="p6" style="width:400px; height:350px; border:1px solid red;"></p>
 	<button id="test6">테스트</button>
 	
 	<script type="text/javascript">
+	$(function(){
+		//var jarr = new Array(5);	//index 이용할 수 있음
+		//jarr[0] = {name: '홍길동', age: 25}
+		
+		//var jarr = new Array(); //Stack 구조가 됨, index 없음
+		//저장 : push(), 꺼내기: pop() 사용함
+		//jarr.push({name: '홍길동', age: 25});
+		
+		//배열 초기화
+		/* var jarr = [{name: '홍길동', age: 25}, {name: '김춘추', age: 35}, {name: '이순신', age: 45}]; */
+		
+		var jarr = new Array();
+		var pStr = $('#p6').html();
+		
+		
+		$('#addBtn').on("click", function(){
+			var njob = new Object();
+			njob.ntitle = $('#ntitle').val();
+			njob.nwriter = $('#nwriter').val();
+			njob.ncontent = $('#ncontent').val();
+			
+			jarr.push(njob);
+			
+			pStr += JSON.stringify(njob);
+			$('#p6').html(pStr + "<br>");
+			
+			//기존 기록된 input의 값 지우기
+			$('#ntitle').val("");
+			$('#ncontent').val("");
+		});	//addBtn click
+		
+		$('#test6').on("click", function(){
+			$.ajax({
+				url: "test6.do",
+				type: "post",
+				data: JSON.stringify(jarr),
+				contentType: "application/json; charset=utf-8",
+				success: function(result){
+					alert("요청 성공!");
+				},
+				error: function(request, status, errorData){
+					console.log("error code : " + request.status + 
+							"\nMessage : " + request.responseText + 
+							"\nError : " + errorData);
+			});
+		});
+	});
 	</script>
 	<hr>
 	
