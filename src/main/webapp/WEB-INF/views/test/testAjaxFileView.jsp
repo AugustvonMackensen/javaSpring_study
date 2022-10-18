@@ -50,6 +50,41 @@ function uploadFile2(){
 	xhrequest.open("POST", "testFileUp.do", true);
 	xhrequest.send(formData);
 }
+
+function fileDown(){
+	//a 태그(파일명) 클릭하면 다운받을 파일명을 서버로 전송함
+	var downfile = $('#fdown').text();
+	
+	$.ajax({
+		url: "filedown.do",
+		type: "get",
+		data: { "fname": downfile },
+		xhrFields: {
+			responseType: 'blob'
+		}, //response 데이터를 바이너리로 처리해야 함
+		success: function(data){
+			console.log("완료.");
+			
+			//응답온 파일 데이터를 Blob 객체로 만듦
+			var blob = new Blob([data]);
+			//클라이언트쪽에 파일 저장 : 다운로드
+			if(navigator.msSaveBlob){
+				return navigator.msSaveBlob(blob, downfile);
+			} else{
+				var link = document.createElement('a');
+				link.href = window.URL.createObjectURL(blob);
+				link.download = downfile;
+				link.click();
+			}
+		},
+		error: function(jqXHR, textStatus, errorThrown){
+			console.log(jqXHR + ", " + textStatus + ", " + errorThrown);
+		}
+	});
+}
+function fileDown2(){
+	
+}
 </script>
 </head>
 <body>
@@ -71,10 +106,11 @@ function uploadFile2(){
 	<input type="button" value="업로드" onclick="uploadFile2();">
 </form>
 <!-- ********************************************** -->
-<hr style="">
+<hr>
 <h2>jQuery 기반 Ajax 파일다운로드</h2>
-
+<a id="fdown" onclick="fileDown();">sample.txt</a>
 <hr>
 <h2>javascript 기반 Ajax 파일다운로드</h2>
+<a id="fdown2" onclick="fileDown2();">sample.txt</a>
 </body>
 </html>

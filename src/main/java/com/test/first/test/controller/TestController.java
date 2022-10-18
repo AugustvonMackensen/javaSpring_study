@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.test.first.notice.model.service.NoticeService;
 import com.test.first.notice.model.vo.Notice;
@@ -80,6 +81,27 @@ public class TestController {
     	
     	response.getWriter().append("ok").flush();
     }
+    
+    @RequestMapping(value="filedown.do", method=RequestMethod.GET)
+	public ModelAndView fileDownMethod(HttpServletRequest request, @RequestParam("fname") String fileName) {
+		//공지사항 첨부파일 저장 폴더 경로 지정
+		String savePath = request.getSession().getServletContext().getRealPath("resources/test_files");
+		
+		//파일다운시 내보낼 파일 객체 생성
+		File downFile = new File(savePath + "\\" + fileName);
+		
+		/* ModelAndView(String viewName, String modelName, Object modelObject)
+		 * viewName == 등록된 뷰클래스의 id명 또는 jsp 파일명
+		 * model == request + response
+		 * modelName == 이름(저장할 이름)
+		 * modelObject == 저장하는 객체
+		 * model.addObject("이름", "객체")과 같음
+		 * 또는 request.setAttribute("이름", "객체")와도 같음
+		 * */
+		
+		
+		return new ModelAndView("afiledown", "downFile", downFile);
+	}
     //ajax test ----------------------------------------------
     @RequestMapping("test1.do")
     @ResponseBody //문자 응답시에는 생략해도 상관없음.
