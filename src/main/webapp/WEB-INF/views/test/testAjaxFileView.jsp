@@ -83,7 +83,32 @@ function fileDown(){
 	});
 }
 function fileDown2(){
+	//javascript ajax로 파일다운로드 처리
+	var filedownURL = "filedown.do";
+	var downfile = document.getElementById('fdown2').innerHTML;
 	
+	//if(window.XMLHttpRequest || "XMLHttpRequest" in window){ //해당 객체가 있다면 }
+	//해당 객체가 없다면으로 조건 처리할 수도 있을 것임
+	if(!(window.ActiveXObject || "ActiveXObject" in window)){
+		//chrome, firefox, opera, safari, IE7+
+		var link = document.createElement('a');
+		link.href = filedownURL + "?fname=" + downfile;
+		link.target = '_blank'; //생략해도 됨
+		link.download = downfile || filedownURL;
+		
+		//link.click();과 같은 동작 처리 코드임
+		var event = document.createEvent("MouseEvents");
+		event.initMouseEvent('click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+		link.dispatchEvent(event);
+		(window.URL || window.webkitURL).revokeObjectURL(link.href);
+		
+	} else{	//IE5, IE6
+		var _window = window.open(fileURL, downfile);
+		_window.document.close();
+		_window.document.execCommand('SaveAs', true, fileName || fileURL)
+		_window.close();
+		removeiframe();
+	}
 }
 </script>
 </head>
