@@ -27,7 +27,28 @@ function uploadFile(){
 	});
 }
 function uploadFile2(){
+	//자바스크립트 ajax 로 파일업로드 처리
+	var form = document.getElementById('fileForm2');
+	var formData = new FormData(form);
 	
+	var xhrequest;	//브라우저별로 ajax를 위한 객체 생성
+	if(window.XMLHttpRequest){
+		xhrequest = new XMLHttpRequest(); //firefox, opera, safari, chrome, IE7 이상
+	} else{	//IE5, IE6
+		xhrequest = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	
+	//ajax 요청
+	//1. 요청 처리에 대한 상태코드가 변경되면, 작동할 내용을 미리 지정함.
+	xhrequest.onreadystatechange = function(){
+		if(xhrequest.readyState == 4 && xhrequest.status == 200){
+			alert(xhrequest.responseText);
+		} //요청이 성공하면 alert 창에 응답온 문자를 출력해라. 로 지정
+	};
+	
+	//2. url 요청하고, 전송값 보내기함
+	xhrequest.open("POST", "testFileUp.do", true);
+	xhrequest.send(formData);
 }
 </script>
 </head>
