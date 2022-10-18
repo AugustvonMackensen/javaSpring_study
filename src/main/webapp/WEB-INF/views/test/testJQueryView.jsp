@@ -272,6 +272,7 @@
 					console.log("error code : " + request.status + 
 							"\nMessage : " + request.responseText + 
 							"\nError : " + errorData);
+				}
 			});
 		});
 	});

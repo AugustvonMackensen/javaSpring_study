@@ -223,21 +223,20 @@ public class TestController {
     	JSONArray jarr = (JSONArray) jparser.parse(param);
     	
     	//json 객체가 가진 각 필드값을 추출해서 vo 객체에 저장
-    	Notice notice = new Notice();
-    	notice.setNoticetitle((String) jarr.get("ntitle"));
-    	notice.setNoticewriter((String) jarr.get("nwriter"));
-    	notice.setNoticecontent((String) jarr.get("ncontent"));
-    	
-    	int result = noticeService.insertNotice(notice);
+    	for(int i = 0; i < jarr.size(); i++){
+    		JSONObject job = (JSONObject) jarr.get(i);
+    		Notice notice = new Notice();
+	    	notice.setNoticetitle((String) job.get("ntitle"));
+	    	notice.setNoticewriter((String) job.get("nwriter"));
+	    	notice.setNoticecontent((String) job.get("ncontent"));
+	    	
+	    	noticeService.insertNotice(notice);
+	
+    	}
     	
     	//ResponseEntity<String> : 클라이언트에게 응답하는 용도의 객체
     	//뷰리졸버가 아닌 출력스트림으로 나감
-    	if(result > 0) {
-    		return new ResponseEntity<String>("success", HttpStatus.OK);
-    	} else {
-    		return new ResponseEntity<String>("failed", HttpStatus.REQUEST_TIMEOUT);
-    	}
-		
+    	return new ResponseEntity<String>("success", HttpStatus.OK);
     }
 }
 
