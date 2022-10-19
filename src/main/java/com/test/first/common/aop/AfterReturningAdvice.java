@@ -31,7 +31,7 @@ public class AfterReturningAdvice {
 		//다른 용도로 처리할 때 사용할 수 있음
 		if(returnObj instanceof Member) {
 			Member member = (Member) returnObj;
-			String dateFormat = new SimpleDateFormat("yyyy-MM-dd (E) hh:mm:ss").format(new Date());
+			String dateFormat = new SimpleDateFormat("yyyy-MM-dd (E) hh24:mm:ss").format(new Date());
 			logger.info(dateFormat + " $" + member.getUserid() + "$ 님이 접속하였습니다.");
 		}
 	}
