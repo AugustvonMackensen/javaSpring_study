@@ -38,6 +38,13 @@ public class TestController {
     @Autowired
     private NoticeService noticeService;
     
+    //뷰 페이지 이동 처리용 --------------------------------------
+    
+    @RequestMapping(value="moveAOP.do", method= {RequestMethod.GET, RequestMethod.POST})
+    public String moveAOPViewMethod() {
+        return "test/testAOPPage";
+    }
+    
     @RequestMapping(value="test.do", method= {RequestMethod.GET, RequestMethod.POST})
     public String testViewMethod() {
         return "test/testView";

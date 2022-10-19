@@ -69,7 +69,7 @@ hr { clear: both; }
 			<li><a href="${ pageContext.servletContext.contextPath }/blist.do?page=1">게시글</a></li>
 			<li><a href="${ pageContext.servletContext.contextPath }/test.do">test</a></li>
 			<li><a href="#">openAPI</a></li>
-			<li><a href="#">AOP란?</a></li>
+			<li><a href="${ pageContext.servletContext.contextPath }/moveAOP.do">AOP란?</a></li>
 		</ul>
 	</c:if>
 	<!-- 로그인 한 경우 : 관리자인 경우 -->
