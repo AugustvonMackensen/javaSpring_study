@@ -20,14 +20,31 @@ public class BeforeAdvice {
 	
 	//BeforeAdvice 가 사용할 포인트컷 설정 : 메소드 형태로 설정함
 	//메소드 안에 내용이 없어야 함
-	@Pointcut("execution(* com.test.first..*Controller.*(...))")
+	@Pointcut("execution(* com.test.first..*.*(..))")
 	public void allPointcut() {
 		
 	}
 	
 	//실행시킬 내용에 대한 코드 작성
-	@Before("allPointCut()")
+	@Before("allPointcut()")
 	public void beforeLog(JoinPoint jp) {
+		//포인트컷으로 지정한 타겟오브젝트의 메소드가 실행되기 전에
+		//공통으로 작동될 기능에 대한 메소드임
+		
+		String methodName = jp.getSignature().getName();
+		//타겟오브젝트의 실행할 메소드 이름 추출
+		
+		Object[] args = jp.getArgs(); //타겟 메소드의 전달인자 추출
+		
+		logger.info("[메소드 실행전 확인] : " + methodName
+				+ "() 메소드 매개변수 갯수 : " + args.length);
+		
+		for(int i=0; i < args.length; i++) {
+			if(args[i] != null) {
+				logger.info(i + "번째 전달인자 정보 : " + args[i].toString());
+			}
+		}
+		
 		
 	}
 }
