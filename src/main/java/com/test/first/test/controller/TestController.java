@@ -39,7 +39,20 @@ public class TestController {
     private NoticeService noticeService;
     
     //뷰 페이지 이동 처리용 --------------------------------------
+    @RequestMapping(value="movePOST.do", method= {RequestMethod.GET, RequestMethod.POST})
+    public String movePOSTViewMethod() {
+        return "test/postSearchView";
+    }
     
+    @RequestMapping(value="moveKakao.do", method= {RequestMethod.GET, RequestMethod.POST})
+    public String moveKakaoLoginViewMethod() {
+        return "test/kakaoLoginView";
+    }
+    
+    @RequestMapping(value="moveMap.do", method= {RequestMethod.GET, RequestMethod.POST})
+    public String moveKakaoMapViewMethod() {
+        return "test/kakaoMapView";
+    }
     @RequestMapping(value="moveAOP.do", method= {RequestMethod.GET, RequestMethod.POST})
     public String moveAOPViewMethod() {
         return "test/testAOPPage";
