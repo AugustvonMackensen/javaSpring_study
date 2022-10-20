@@ -27,7 +27,7 @@
 		<tr><th colspan="2">
 			<input type="submit" value="댓글등록하기"> &nbsp;
 	      	<input type="reset" value="작성취소"> &nbsp;
-			<button onclick="javascript:history.go(-1)">이전페이지로 이동</button>
+			<input type="button" onclick="javascript:history.go(-1)" value="이전페이지로 이동">
 		</th></tr>
 	</table>
 </form>

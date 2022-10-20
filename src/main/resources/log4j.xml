@@ -66,6 +66,11 @@
 		<level value="info" />
 	</logger>
 	
+	<!--  interceptor 패키지 logger 등록함 -->
+	<logger name="com.test.first.common.intercepter.LoggerInterceptor">
+		<level value="debug" />
+	</logger>
+	
 	<!-- 3rdparty Loggers -->
 	<logger name="org.springframework.core">
 		<level value="info" />

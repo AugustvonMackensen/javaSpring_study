@@ -61,9 +61,9 @@ function showWriteForm(){
 <!-- 
 	=> 로그인한 회원만 게시글 등록 버튼이 보이게 함 -->
 <center>
-<c:if test="${ !empty sessionScope.loginMember }">
+<%-- <c:if test="${ !empty sessionScope.loginMember }"> --%>
 	<button onclick="showWriteForm();">글쓰기</button>
-</c:if>
+<%-- </c:if> --%>
 </center>
 <!-- 검색 항목 영역 -->
 <center>

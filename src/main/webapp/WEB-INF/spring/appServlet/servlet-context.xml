@@ -63,4 +63,26 @@
 	</beans:bean> -->
 	<!-- 클래스 위에 어노테이션을 사용해서 자동 등록 처리 -->
 	
+	
+	<!-- mvc 탭에서 등록 처리함 -->
+	<interceptors>
+	<!-- 로그인 상태에서 요청하는 서비스 체크용 인터셉터 -->
+	<interceptor>
+			<mapping path="/bwform.do" />
+			<mapping path="/myinfo.do" />
+			<mapping path="/mupdate.do" />
+			<mapping path="/breplyform.do" />
+			<beans:bean id="loginCheckInterceptor"
+				class="com.test.first.common.intercepter.LoginCheckInterceptor">
+			</beans:bean>
+	</interceptor>
+	<!-- 인터셉터 작동 위치 확인용 로그인인터셉터 -->
+	<interceptor>
+		<mapping path="/**" />
+		<beans:bean id="loggerInterceptor"
+			class="com.test.first.common.intercepter.LoggerInterceptor">
+		</beans:bean>
+	</interceptor>
+	</interceptors>
+	
 </beans:beans>
