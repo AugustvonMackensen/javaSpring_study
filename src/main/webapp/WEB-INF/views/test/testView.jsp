@@ -20,7 +20,8 @@
 <h2><a href="${ pageContext.servletContext.contextPath }/testJS.do">javascript ajax</a></h2>
 <h2><a href="${ pageContext.servletContext.contextPath }/testJQuery.do">jquery ajax</a></h2>
 <h2><a href="${ pageContext.servletContext.contextPath }/testAjaxFile.do">ajax fileup/download</a></h2>
-
+<hr>
+<h2>OPEN API</h2>
 <h2><a href="${ pageContext.servletContext.contextPath }/movePOST.do">주소, 우편번호 검색 api</a></h2>
 <h2><a href="${ pageContext.servletContext.contextPath }/moveKakao.do">카카오 로그인 api</a></h2>
 <h2><a href="${ pageContext.servletContext.contextPath }/moveMap.do">카카오 Map api</a></h2>
