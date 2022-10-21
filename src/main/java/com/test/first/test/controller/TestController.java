@@ -83,6 +83,31 @@ public class TestController {
     	return "test/testAjaxFileView";
     }
     
+    @RequestMapping(value="map1.do", method= {RequestMethod.GET, RequestMethod.POST})
+	public String moveMap1ViewMethod() {
+		return "test/mapExample01";
+	}
+	
+	@RequestMapping(value="map2.do", method= {RequestMethod.GET, RequestMethod.POST})
+	public String moveMap2ViewMethod() {
+		return "test/mapExample02";
+	}
+	
+	@RequestMapping(value="map3.do", method= {RequestMethod.GET, RequestMethod.POST})
+	public String moveMap3ViewMethod() {
+		return "test/mapExample03";
+	}
+	
+	@RequestMapping(value="map4.do", method= {RequestMethod.GET, RequestMethod.POST})
+	public String moveMap4ViewMethod() {
+		return "test/mapExample04";
+	}
+	
+	@RequestMapping(value="map5.do", method= {RequestMethod.GET, RequestMethod.POST})
+	public String moveMap5ViewMethod() {
+		return "test/mapExample05";
+	}
+	
     //ajax file upload
     @RequestMapping(value="testFileUp.do", method=RequestMethod.POST)
     public void testFileUploadMethod(HttpServletRequest request,
