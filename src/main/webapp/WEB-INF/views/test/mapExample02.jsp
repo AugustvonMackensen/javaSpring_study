@@ -30,7 +30,7 @@
 	
 	<!-- 지도를 표시할 div 입니다 -->
 	<div id="map" style="width:600px;height:400px;"></div>
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b7b4462620f1ccc2046ae205abc86529"></script>
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=324b64b39cfcbbd4195127e6b989c7fd"></script>
 	<script>
 		var container = document.getElementById('map'); // 지도를 표시할 div 
 		var options = {
